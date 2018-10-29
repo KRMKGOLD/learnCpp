@@ -17,3 +17,21 @@ public:
 ```
 
 useClass.cpp 파일의 클래스
+
+
+
+2. friend_class.cpp : C++ Class에서의 friend 키워드, 객체의 캡슐화를 무시함으로써 정보 은닉의 중요성 무시
+
+```C++
+class studentInfo {
+private:
+	string name;
+	string major;
+	int student_number;
+public:
+	studentInfo(string a, string b, int c);
+	friend void printGrade(studentInfo, grade);	// friend function
+};
+```
+
+friend 함수로 private에 접근 가능
